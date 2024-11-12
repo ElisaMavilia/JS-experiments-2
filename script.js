@@ -40,8 +40,8 @@ const calcTemAmplitude = function (temps) {
     console.log('New Array: ', newArray);
   }
   console.log(max, min);
-  let amplitude = max - min;
-  return amplitude;
+  return max - min;
 };
 
-console.log(calcTemAmplitude(temperatures));
+const amplitude = calcTemAmplitude(temperatures);
+console.log(amplitude);
