@@ -73,3 +73,21 @@ const calcTemAmplitudeNew = function (t1, t2) {
 
 const amplitudeNew = calcTemAmplitudeNew(array1, array2);
 console.log(amplitudeNew);
+
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+    value: Number(prompt('Degrees celsius')), //The bug was that the prompt was a string, so I changed the typeof with the Number method
+  };
+  // A) Find the bug
+  console.log(measurement);
+  console.table(measurement);
+  console.log(measurement.value);
+  /* console.warn(measurement.value);
+  console.error(measurement.value); */
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+// A) identify the bug
+console.log(measureKelvin());
